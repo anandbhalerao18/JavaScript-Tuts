@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brouser Events</title>
+    <style>
+        *{
+            background-color: black;
+            color: aqua;
+        }
+        button{
+            padding: 0 10px;
+            color: crimson;
+            background: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <div class="container" onmouseenter="console.log('container mai click hua')" onclick="console.log('contianer mai click huaa')">
+        <button onclick="alert('hello')">click me</button>
+    </div>
+    <script>
+        let a = document.getElementsByClassName('container')[0]
+        onclick = () =>{
+            let b = document.getElementsByClassName("container")[0]
+            b.innerHTML = "Kem Cho world "
+        }
+
+
+
+    </script>
+</body>
+</html>

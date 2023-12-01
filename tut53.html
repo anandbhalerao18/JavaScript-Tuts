@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback hell</title>
+</head>
+<body>
+
+
+    <script>
+         function loadScript(src, callback){
+            var script = document.createElement("script")
+            script.src = src
+            script.onload = function() {
+                console.log("script loaded with SRC:" + src)
+                callback(null, src);
+            }
+            script.onerror = function(){
+                console.log("Error loading script with SRC:" + src)
+                callback(new Error("src got some error"))
+            }
+            script.onload = function(){
+                console.log("Script Loaded")
+            }
+            document.body.appendChild(script)
+        }
+        function hello(error, src){
+            alert("hello world" + src);
+        }
+
+        function goodmoring(src){
+            alert("goodmoring" + src);
+        }
+        loadScript("https://google.com" )
+        
+    </script>
+</body>
+</html>

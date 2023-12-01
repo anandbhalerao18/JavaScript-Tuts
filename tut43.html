@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML insertion Methods</title>
+</head>
+
+<body>
+    I'am out side of container (outer)
+    <div class="container">
+        Im start of this container (inner)
+        <div id="first">Im a First Element</div>
+        im End of this container (Inner)
+    </div>
+    I'am out side of container (outer)
+
+
+
+
+
+
+
+
+
+    <script>
+        let a = document.getElementsByTagName('div')[0]
+        // a.innerHTML = a.innerHTML +'<h1>Hello World</h1>';
+
+        let div = document.createElement('div');
+        div.innerHTML = '<h1>Namaste World</h1>';
+        // a.append(div);
+        // a.appendChild(div);
+        // a.prepend(div);
+        // a.before(div);
+        // a.after(div);
+        // a.replaceWith(div);
+    </script>
+</body>
+
+</html>

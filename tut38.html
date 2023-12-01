@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice set </title>
+    <style>
+        * {
+           margin: 0;
+           padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            background: black;
+
+        }
+        
+        nav li {
+            list-style: none;
+            padding: 0 23px;
+            color: white;
+
+        }
+
+        
+    </style>
+</head>
+<body>
+    <nav>
+            <li>home</li>
+            <li>Contact</li>
+            <li>Settings</li>
+            <li>More</li>
+    </nav>
+    <table>
+        <td>Hello</td>
+        <tr>hello 1</tr>
+        <tr>hello 2</tr>
+        <tr>hello 3</tr>
+        <tr>hello 4</tr>
+    </table>
+    <script>
+        //question 1
+        // document.getElementsByTagName("nav")[0].firstElementChild.style.color = "red"
+
+
+        //question 2
+        //no if we check view page source we dont get any tbody there but if we inspect the page then we get the tbody 
+
+        //question 3 using nabbar 
+        document.getElementsByTagName("nav")[0].firstElementChild.style.color = "Green"
+        document.getElementsByTagName("nav")[0].lastElementChild.style.color = "Green"
+
+
+        //question 4 
+        Array.from(.getElementsByTagName("li")).forEach((element) => {
+            element.style.background = "cyan";
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

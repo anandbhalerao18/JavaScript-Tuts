@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handaling Brouser Events</title>
+</head>
+<body>
+    <div>
+        <button id="btn">
+            click Me
+        </button>
+    </div>
+
+
+
+
+    <script>
+
+        let x =  function(event){
+            console.log(event,typeof, event.clientx, event.clienty);
+            console.log(event.target);
+            alert("Hello World")
+        }
+
+        let y = function(e){
+            alert("namaste world")
+        }
+
+        btn.addEventListener("click", x)
+
+        // btn.addEventListener("click", y)
+        
+        // let a = prompt("what is your favroite number ?")
+        // if(a == '2'){
+        //     btn.removeEventListener('click', x)
+        // }
+
+    </script>
+</body>
+</html>

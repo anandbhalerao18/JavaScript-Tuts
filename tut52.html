@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introduction to call backs</title>
+</head>
+<body>
+
+
+
+
+
+    <script>
+        // this is an example of syncronous programming
+        // let a = prompt("what is your age?")
+        // let b = prompt("what is your name?")
+        // let c = prompt("what is your favroite color?")
+        // console.log(b + "is" + a + "years old and has " + c + "favorite color")
+
+        // this is an example of asyncronus programming
+        // console.log("Start")
+        // setTimeout((funciton) => {
+        //     console.log('Hey I am good')
+            
+        // }, 2000);
+        // console.log("End")
+
+        // CallBacks
+        function loadScript(src, callback){
+            var script = document.createElement("script")
+            script.src = src
+            script.onload = function() {
+                console.log("script loaded with SRC:" + src)
+                callback(null, src);
+            }
+            script.onerror = function(){
+                console.log("Error loading script with SRC:" + src)
+                callback(new Error("src got some error"))
+            }
+            script.onload = function(){
+                console.log("Script Loaded")
+            }
+            document.body.appendChild(script)
+        }
+        function hello(error, src){
+            alert("hello world" + src);
+        }
+
+        function goodmoring(src){
+            alert("goodmoring" + src);
+        }
+        loadScript("https://google.com" )
+
+
+        
+
+    </script>
+</body>
+</html>

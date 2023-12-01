@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing HTML classes using javascript - classname and classlist</title>
+</head>
+<style>
+    .yellow{
+        background: yellow;
+        color: white;
+    }
+    .red{
+        background: red;
+        color: white;
+    }
+    .text-dark{
+    color: black;
+    }
+</style>
+<body>
+    <div id="first" class="yellow text-dark">
+        <span>Hey im good </span>
+    </div>
+
+    <script>
+        first.className = "text-dark red"
+        first.classList.add("red")
+        first.classList.remove("red")
+        first.classList.contains("red")
+        first.classList.contains("red")
+
+
+    </script>
+</body>
+</html>
